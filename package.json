@@ -1,5 +1,5 @@
 {
-  "name": "electron-quick-start",
+  "name": "discord-desktop-mobile",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
@@ -8,16 +8,17 @@
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/neetoons/discord-desktop-mobile",
   "keywords": [
+    "Discord",
     "Electron",
     "quick",
     "start",
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "neetoons",
+  "license": "MIT",
   "devDependencies": {
     "@electron-forge/cli": "^6.1.1",
     "@electron-forge/maker-deb": "^6.1.1",
