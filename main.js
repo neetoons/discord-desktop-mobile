@@ -7,6 +7,7 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 337,
     height: 506,
+    icon: path.join(__dirname, 'assets', 'icon.png') ,
     autoHideMenuBar: true,
     alwaysOnTop: true,
     backgroundColor: '#FFF',
