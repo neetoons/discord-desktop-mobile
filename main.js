@@ -9,35 +9,29 @@ function createWindow () {
     height: 506,
     icon: path.join(__dirname, 'assets', 'icon.png') ,
     autoHideMenuBar: true,
-    alwaysOnTop: true,
     backgroundColor: '#FFF',
     useContentSize: true,
     resizable: true,
     minWidth:337,
     minHeight:506,
     maxWidth:337,
-    center: true,
     fullscreen:false,
     backgroundColor:"#313338"
     })
-  const mainWindow2 = new BrowserWindow({
+  const loginWindow = new BrowserWindow({
     width: 1000,
     height: 700,
     icon: path.join(__dirname, 'assets', 'icon.png') ,
     autoHideMenuBar: true,
-    alwaysOnTop: true,
     backgroundColor: '#FFF',
     useContentSize: true,
     resizable: true,
-    //minWidth:337,
-    //minHeight:506,
-    //maxWidth:337,
     center: true,
     fullscreen:false,
     backgroundColor:"#313338"
     })
-mainWindow2.webContents.on('did-finish-load', () => {
-  mainWindow2.webContents.insertCSS(`
+loginWindow.webContents.on('did-finish-load', () => {
+  loginWindow.webContents.insertCSS(`
     .custom-header {
       position: fixed;
       top: 0;
@@ -51,7 +45,7 @@ mainWindow2.webContents.on('did-finish-load', () => {
     }
   `)
   
-  mainWindow2.webContents.executeJavaScript(`
+  loginWindow.webContents.executeJavaScript(`
     const header = document.createElement('div')
     header.className = 'custom-header'
     header.textContent = 'Login in in this window using qr-code, then restart the app and close this window.'
@@ -65,11 +59,10 @@ mainWindow2.webContents.on('did-finish-load', () => {
   `)
 })
   // and load the index.html of the app.
-  //mainWindow.loadFile('index.html')
     mainWindow.webContents.setUserAgent('Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Mobile/15E148 Safari/604.1')
 
  mainWindow.loadURL('https://discord.com/app')
- mainWindow2.loadURL('https://discord.com/login')
+ loginWindow.loadURL('https://discord.com/login')
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
