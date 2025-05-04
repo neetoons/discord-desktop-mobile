@@ -14,7 +14,6 @@ function createWindow () {
     resizable: true,
     minWidth:337,
     minHeight:506,
-    maxWidth:337,
     fullscreen:false,
     backgroundColor:"#313338"
     })
